@@ -32,7 +32,7 @@ app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod()
     .AllowCredentials()
-    .WithOrigins("http://localhost:3001", "https://localhost:3001"));
+    .WithOrigins("http://localhost:3001"));
 app.MapControllers();
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
